@@ -51,7 +51,7 @@ def viz():
     # Adjust the rotation and spacing of x-axis labels
     plt.xticks(rotation=30, ha="right")  # ha='right' aligns the labels to the right
     plt.tight_layout()  # Ensures proper spacing
-    plt.show("server.png")
+    plt.show()
     average_seconds_by_surface = query.groupBy("surface").avg(
         "seconds_before_next_point"
     )
@@ -69,7 +69,7 @@ def viz():
     plt.ylabel("Average Seconds Before Next Point")
     plt.title("Average Seconds Before Next Point by Surface Type")
     plt.xticks(rotation=45)
-    plt.show("surface.png")
+    plt.show()
 
 
 if __name__ == "__main__":
